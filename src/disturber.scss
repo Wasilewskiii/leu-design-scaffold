@@ -1,0 +1,23 @@
+.tjs__disturber {
+    height: rem(45px);
+    font-size: rem(20px);
+    background: #263238;
+    margin-bottom: rem(70px);
+
+    p {
+        margin: 0;
+        color: $white;
+    }
+
+    &.mobile {
+        height: auto;
+
+        .tjs__disturber {
+
+            &__content {
+                max-width: 80vw!important;
+                padding: rem(10px) 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+/**
+ * Komponente: header
+ */
+
+.tjs__header {
+    background: transparent linear-gradient(118deg, #E8F6FF 0%, #ECF2DC 100%) 0% 0% no-repeat padding-box;
+    padding: rem(15px) 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    img {
+        max-width: 100%;
+    }
+
+    &--top-bar {
+        margin-bottom: rem(15px);
+        &__item {
+            &:not(:last-child) {
+                margin-right: rem(30px);
+            }
+
+            &--inner {
+                background: rgba(255, 255, 255, 0.6);
+                border-radius: 10px;
+                padding: rem(7px) rem(15px);
+
+                p {
+                    margin-bottom: 0;
+                    font-size: rem(15px);
+                    color: $black;
+                }
+
+            }
+        }
+    }
+
+    &--hero {
+        margin-bottom: rem(70px);
+    }
+
+    &--nav {
+        background: $white;
+        border-radius: 10px;
+        width: 100%;
+        height: rem(80px);
+        align-content: center;
+        margin-bottom: rem(40px);
+        box-shadow: 0px 1px 2px #00000029;
+
+        &__logo {
+            margin-right: auto;
+
+            img {
+                height: rem(42px);
+                width: auto;
+            }
+        }
+
+        &__items {
+            &-item {
+                font-size: rem(18px);
+                font-weight: 500;
+                margin-right: 2rem;
+                height: rem(80px);
+                line-height: rem(80px);
+                color: $font-main-color;
+                padding: 0 1rem;
+                transition: 0.3s;
+
+                &:hover {
+                    background: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &.mobile {
+        .tjs__header {
+            &--top-bar {
+                &__item {
+                    &:last-child {
+                        margin-left: auto;
+                    }
+                }
+            }
+
+            &--nav {
+                height: auto;
+                padding: rem(15px) rem(20px);
+            }
+        }
+    }
+}

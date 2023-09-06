@@ -1,0 +1,70 @@
+/**
+ * Komponente: cards
+ */
+
+/** könnte alternativ auch als "--cards" Variable im Template stehen, um automatisiert mit der Anzahl der Karten befüllt zu werden */
+$cards: 4;
+$cardHeight: rem(360px);
+$cardTopPadding: 1rem;
+
+.tjs__cards {
+    img {
+        width: 100%;
+    }
+
+    h3 {
+        @include h3;
+        margin-top: rem(45px);
+    }
+
+    &--text {
+        position: sticky;
+        top: rem(30px);
+    }
+
+    &--list {
+        list-style: none;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat($cards, $cardHeight);
+        padding-bottom: calc($cards * $cardTopPadding);
+
+        @for $i from 1 through $cards {
+            &-item[data-card-id="#{$i}"] {
+                --index: #{$i};
+            }
+        }
+
+        &-item {
+            position: sticky;
+            top: rem(30px);
+
+            &:not(:first-child) {
+                padding-top: calc(var(--index) * $cardTopPadding);
+                margin-top: -1rem;
+            }
+
+            &:nth-child(even) {
+                transform: rotate(-0.003turn);
+            }
+
+            &-body {
+                box-sizing: border-box;
+                padding: 20px;
+                border-radius: 20px;
+                height: auto;
+                transition: all 0.5s;
+                border: 1px solid #DDDDDD;
+                background: $white;
+
+                &__text {
+                    font-size: rem(18px);
+                }
+            }
+        }
+    }
+
+    &.mobile {
+    }
+}
