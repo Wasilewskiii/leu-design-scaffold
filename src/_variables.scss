@@ -3,4 +3,15 @@
  * Überschreiben der _variables aus Bootstrap bzw. globale Konfiguration von Farben, Abständen etc.
  */
 
-$primary: #007bff;
+$primary: #41C7A8;
+$black: #000;
+$white: #fff;
+$font-main-color: #363636;
+
+
+/**
+ * Fonts (werden am Ende gelöscht und ersetzt?)
+ */
+
+@import "typography";
+

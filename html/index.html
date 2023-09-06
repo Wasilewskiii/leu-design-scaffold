@@ -1,50 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leuffen Element Scaffold</title>
+
     <link type="text/css" rel="stylesheet" href="/assets/style.css">
     <link type="text/css" rel="stylesheet" href="/assets/bs.css">
 </head>
 <body>
-    <main>
-
-        <section class="tjs-hero-2col">
-            <div class="tjs__wrapper">
-                <div class="tjs__start">
-                    <h1>Leuffen Element Scaffold</h1>
-                    <p>Leuffen Element Scaffold is a simple tool to create a new element for the Leuffen Element Framework.</p>
-                    <p>It is based on the</p>
+<main>
+    <section class="tjs__header">
+        <div class="tjs__wrapper container-fluid">
+            <div class="tjs__header--top-bar d-flex justify-content-md-end container-xxl">
+                <div class="tjs__header--top-bar__item">
+                    <div class="tjs__header--top-bar__item--inner d-none d-md-block">
+                        <p><b>Service-Tel.:</b> +49 1234 56789-0</p>
+                    </div>
+                    <a href="#">
+                        <div class="tjs__header--top-bar__item--inner d-md-none">
+                            <p>Service anrufen</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="tjs__end">
-                    <img src="">
+                <div class="tjs__header--top-bar__item">
+                    <a class="text-decoration-none" href="#">
+                        <div class="tjs__header--top-bar__item--inner">
+                            <p>Angebot anfordern</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <section class="tjs-cta-base">
-            <div class="tjs__wrapper">
-                <div class="tjs__start">
-                    <h1>Leuffen Element Scaffold</h1>
+            <div class="tjs__header--nav">
+                <div class="container-xxl d-flex justify-content-md-end align-items-center">
+                    <div class="tjs__header--nav__logo">
+                        <picture>
+                            <source srcset="/images/logo-systemwebsite.webp" type="image/webp">
+                            <source srcset="/images/logo-systemwebsite.png" type="image/png">
+                            <img src="/images/logo-systemwebsite.png">
+                        </picture>
+                    </div>
+                    <div class="tjs__header--nav__items d-none d-md-flex">
+                        <a class="tjs__header--nav__items-item text-decoration-none" href="#">Service</a>
+                        <a class="tjs__header--nav__items-item text-decoration-none" href="#">Vorteile</a>
+                        <a class="tjs__header--nav__items-item text-decoration-none" href="#">Ablauf</a>
+                        <a class="tjs__header--nav__items-item text-decoration-none" href="#">Kontakt</a>
+                    </div>
+                    <div class="tjs__header--nav__mobile-menu d-flex">
+                        <div>mmenu</div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <script>
-        // Bei DomDocumentLoaded und Reszise des Viewports prüfen, ob die Klasse mobile gesetzt werden muss. Anonsten Klasse entfernen.
-        const setMobileClass = () => {
-            const isMobile = window.innerWidth < 768;
-            const sections = document.querySelectorAll('section');
-            sections.forEach((section) => {
-                if (isMobile) {
-                    section.classList.add('mobile');
-                } else {
-                    section.classList.remove('mobile');
-                }
-            });
-        };
-        window.addEventListener('DOMContentLoaded', setMobileClass);
-        window.addEventListener('resize', setMobileClass);
-    </script>
+            <div class="tjs__header--hero container">
+                <div class="row row-flex align-items-center">
+                    <div class="tjs__header--hero-col col-12 col-md-6 text-center text-md-start">
+                        <h1>Wir entwickeln moderne <br class="d-none d-xl-block" />Websiten für Ärzte</h1>
+                        <p>Hier steht noch ein kleiner Tet</p>
+                        <a href="#" class="btn btn-primary">Mehr erfahren</a>
+                    </div>
+                    <div class="tjs__header--hero-col col d-none d-md-block col-md-6">
+                        <picture>
+                            <source srcset="/images/hero-image.webp" type="image/webp">
+                            <source srcset="/images/hero-image.svg" type="image/svg">
+                            <img src="/images/hero-image.svg">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tjs__disturber d-flex justify-content-center align-items-center">
+        <div class="tjs__wrapper">
+            <div class="tjs__disturber__content container text-center">
+                <p>Wir garantieren Ihnen 100% Zufriedenheit mit unserer <b class="text-primary">30 Tage Geld-zurück-Garantie!</b></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tjs__cards">
+        <div class="tjs__wrapper container">
+            <div class="row row-flex align-items-top">
+                <div class="tjs__cards-col col-12 col-md-6">
+                    <div class="tjs__cards--text">
+                        <h1>Wir entwickeln moderne <br class="d-none d-xl-block" />Websiten für Ärzte</h1>
+                        <p>Hier steht noch ein kleiner Text</p>
+                        <a href="#" class="btn btn-outline-primary">Mehr erfahren</a>
+                    </div>
+                </div>
+                <div class="tjs__cards-col col-12 col-md-6">
+                    <ul class="tjs__cards--list">
+                        <li class="tjs__cards--list-item" data-card-id="1">
+                            <div class="tjs__cards--list-item-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3>Design-Entwurf</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <picture>
+                                            <source srcset="/images/illustration-a2.webp" type="image/webp">
+                                            <source srcset="/images/illustration-a2.svg" type="image/svg">
+                                            <img src="/images/illustration-a2.svg">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="tjs__cards--list-item-body__text">
+                                    Wir erstellen das Layout nach Ihren Wünschen, bis sie 100% zufrieden sind.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tjs__cards--list-item" data-card-id="2">
+                            <div class="tjs__cards--list-item-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3>Design-Entwurf</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <picture>
+                                            <source srcset="/images/illustration-a2.webp" type="image/webp">
+                                            <source srcset="/images/illustration-a2.svg" type="image/svg">
+                                            <img src="/images/illustration-a2.svg">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="tjs__cards--list-item-body__text">
+                                    Wir erstellen das Layout nach Ihren Wünschen, bis sie 100% zufrieden sind.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tjs__cards--list-item" data-card-id="3">
+                            <div class="tjs__cards--list-item-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3>Design-Entwurf</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <picture>
+                                            <source srcset="/images/illustration-a2.webp" type="image/webp">
+                                            <source srcset="/images/illustration-a2.svg" type="image/svg">
+                                            <img src="/images/illustration-a2.svg">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="tjs__cards--list-item-body__text">
+                                    Wir erstellen das Layout nach Ihren Wünschen, bis sie 100% zufrieden sind.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tjs__cards--list-item" data-card-id="4">
+                            <div class="tjs__cards--list-item-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h3>Design-Entwurf</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <picture>
+                                            <source srcset="/images/illustration-a2.webp" type="image/webp">
+                                            <source srcset="/images/illustration-a2.svg" type="image/svg">
+                                            <img src="/images/illustration-a2.svg">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="tjs__cards--list-item-body__text">
+                                    Wir erstellen das Layout nach Ihren Wünschen, bis sie 100% zufrieden sind.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="width: 100vw; height: 800px;"></div>
+</main>
+
+<script>
+    // Bei DomDocumentLoaded und Reszise des Viewports prüfen, ob die Klasse mobile gesetzt werden muss. Anonsten Klasse entfernen.
+    const setMobileClass = () => {
+        const isMobile = window.innerWidth < 768;
+        const sections = document.querySelectorAll('section');
+        sections.forEach((section) => {
+            if (isMobile) {
+                section.classList.add('mobile');
+            } else {
+                section.classList.remove('mobile');
+            }
+        });
+    };
+    window.addEventListener('DOMContentLoaded', setMobileClass);
+    window.addEventListener('resize', setMobileClass);
+</script>
 </body>
 </html>
