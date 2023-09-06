@@ -4,7 +4,8 @@
 @import "variables";
 @import "bootstrap/scss/mixins";
 
-@import "component/header-2col";
-@import "component/cta-base";
-
 // Hier weitere Komponenten importieren:
+@import "override";
+@import "component/header";
+@import "component/disturber";
+@import "component/cards";
