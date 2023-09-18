@@ -8,7 +8,20 @@ html * {
 
 @mixin h3 {
     font-family: 'Roboto';
-    font-size: rem(24px);
+    font-size: rem(18px);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(24px);
+    }
+}
+
+@mixin p {
+    font-family: 'Roboto';
+    font-size: rem(14px);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem(18px);
+    }
 }
 
 

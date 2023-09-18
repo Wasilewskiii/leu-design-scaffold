@@ -1,11 +1,19 @@
 /* Diese Datei wird per Webpack an /dist/style.css veröffentlicht */
 
 // Komponenten nachfolgend importieren:
+@use "bs" as *;
+@use "sass:math";
+@import "functions";
 @import "variables";
-@import "bootstrap/scss/mixins";
+@import "override";
 
 // Hier weitere Komponenten importieren:
-@import "override";
 @import "component/header";
 @import "component/disturber";
-@import "component/cards";
+@import "component/icon-catchphrases";
+@import "component/service-slider";
+@import "component/cards-slider";
+@import "component/2-cols";
+@import "component/2-cols-bg";
+@import "component/key-figures";
+@import "component/customer-reviews";

@@ -1,0 +1,112 @@
+/**
+ * Komponente: service-slider
+ */
+
+.tjs-service-slider {
+    @include element-to-element-margin-medium;
+
+    &__content--container {
+        background: transparent linear-gradient(293deg, #DCF2DE 0%, #E8F6FF 100%) no-repeat;
+        border-radius: 40px;
+        padding: rem(82px) 0;
+    }
+
+    &__content {
+        &--row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        &--col {
+            flex-basis: 50%;
+            @include col-side-paddings;
+            @include col-mobile-bottom-paddings;
+
+            &-text {
+                text-align: left;
+
+                blockquote {
+                    color: $primary;
+                    font-size: rem(18px);
+                    text-transform: uppercase;
+                }
+            }
+
+            &-image {
+                display: block;
+            }
+
+            &__mobile-button {
+                display: none;
+                text-align: center;
+            }
+        }
+    }
+
+    &__carousel {
+        display: flex;
+        overflow-x: scroll;
+        text-align: center;
+
+        &--slide {
+            background: $white;
+            box-shadow: 0px 1px 2px #00000029;
+            border-radius: 20px;
+            padding: 30px;
+            width: rem(350px);
+            height: rem(390px);
+
+            &:not(:last-child) {
+                margin-right: rem(35px);
+            }
+
+            &__image {
+                @include element-to-element-margin-medium;
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    &.mobile {
+        .tjs-wrapper {
+            margin: 0 auto;
+        }
+
+        .tjs-service-slider {
+            &__content--container {
+                padding: 2rem 0 1rem 0;
+            }
+
+            &__col {
+                flex-basis: 100%;
+            }
+
+            &__content {
+                &--col {
+                    flex-basis: 100%;
+                    @include col-side-paddings;
+
+                    &__mobile-button {
+                        display: block;
+                    }
+
+                    .desktop-button {
+                        display: none;
+                    }
+                }
+            }
+
+            &__carousel {
+                margin-bottom: 2rem;
+
+                &--slide {
+                    flex: 0 0 100%;
+                }
+            }
+        }
+    }
+}
