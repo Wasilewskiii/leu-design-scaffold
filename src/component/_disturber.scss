@@ -1,12 +1,12 @@
 .tjs-disturber {
     @include element-to-element-margin-small;
 
-    height: rem(45px);
     font-size: rem(20px);
     background: #263238;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: rem(5px) 0 rem(6px);
 
     &__content {
         text-align: center;
@@ -18,8 +18,6 @@
     }
 
     &.mobile {
-        height: auto;
-
         .tjs-disturber {
             &__content {
                 max-width: 80vw!important;

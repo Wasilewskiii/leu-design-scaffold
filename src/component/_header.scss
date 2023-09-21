@@ -78,6 +78,10 @@
                 transition: 0.3s;
                 text-decoration: none;
 
+                @include media-breakpoint-down(lg) {
+                    margin-right: 0.5rem;
+                }
+
                 &:hover {
                     background: $primary;
                     color: $white;
