@@ -4,7 +4,7 @@
 
 /** könnte alternativ auch als "--cards" Variable im Template stehen, um automatisiert mit der Anzahl der Karten befüllt zu werden */
 $cards: 4;
-$cardHeight: rem(360px);
+$cardHeightMobile: rem(360px);
 $cardTopPadding: 1rem;
 
 .tjs-cards-slider {
@@ -45,7 +45,7 @@ $cardTopPadding: 1rem;
         padding-left: 0;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat($cards, $cardHeight);
+        grid-template-rows: repeat($cards, auto);
 
         @for $i from 1 through $cards {
             &-item[data-card-id="#{$i}"] {

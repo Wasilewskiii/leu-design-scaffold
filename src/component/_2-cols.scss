@@ -13,7 +13,6 @@
     &__col {
         flex-basis: 50%;
         @include col-side-paddings;
-        @include col-mobile-bottom-paddings;
 
         h3 {
             @include h3;
@@ -49,6 +48,8 @@
 
                 &--image {
                     order: 1;
+
+                    @include col-mobile-bottom-paddings;
                 }
 
                 &--text-content {
