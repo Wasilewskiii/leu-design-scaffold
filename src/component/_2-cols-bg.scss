@@ -65,6 +65,10 @@
                 top: rem(-80px);
                 max-width: rem(110px);
 
+                @include media-breakpoint-down(xxl) {
+                    left: rem(-30px);
+                }
+
                 @include media-breakpoint-down(xl) {
                     left: 0;
                 }
@@ -76,6 +80,11 @@
                 bottom: rem(-80px);
                 max-width: rem(110px);
                 transform: scaleX(-1);
+
+                @include media-breakpoint-down(xxl) {
+                    right: rem(-30px);
+                }
+
                 @include media-breakpoint-down(xl) {
                     right: 0;
                 }
