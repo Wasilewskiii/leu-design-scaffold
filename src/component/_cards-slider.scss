@@ -50,7 +50,7 @@ $cardTopPadding: 1rem;
         @for $i from 1 through $cards {
             &-item[data-card-id="#{$i}"] {
                 --index: #{$i};
-                --negative-index: -#{$i};
+                --indexRem: #{$i}rem;
             }
         }
 
@@ -59,8 +59,8 @@ $cardTopPadding: 1rem;
             top: rem(30px);
 
             &:not(:first-child) {
-                padding-top: calc(var(--index) * $cardTopPadding);
-                margin-top: -1rem;
+                padding-top: var(--indexRem);
+                margin-top: calc(var(--index) * -0.5rem);
             }
 
             &:nth-child(even) {
