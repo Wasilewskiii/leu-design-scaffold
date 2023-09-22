@@ -90,6 +90,43 @@
             }
         }
 
+        &--nav-points {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+
+            &__point {
+                width: rem(13px);
+                height: rem(13px);
+                background: $white;
+                border-radius: 50%;
+                border: 1px solid #363636;
+                position: relative;
+
+                &:not(:last-child) {
+                    margin-right: rem(9px);
+                }
+
+                &:after {
+                    content: "";
+                    width: rem(9px);
+                    height: rem(9px);
+                    display: block;
+                    position: absolute;
+                    top: 1px;
+                    left: 1px;
+                    background: $white;
+                    border-radius: 50%;
+                }
+
+                &.active {
+                    &:after {
+                        background: $primary;
+                    }
+                }
+            }
+        }
+
         &--slide {
             background: $white;
             box-shadow: 0px 1px 2px #00000029;

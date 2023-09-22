@@ -61,8 +61,8 @@
         &-stars {
             &--left {
                 position: absolute;
-                left: rem(-100px);
-                top: rem(-60px);
+                left: rem(-50px);
+                top: rem(-80px);
                 max-width: rem(110px);
 
                 @include media-breakpoint-down(xl) {
@@ -72,7 +72,7 @@
 
             &--right {
                 position: absolute;
-                right: rem(-60px);
+                right: rem(-50px);
                 bottom: rem(-80px);
                 max-width: rem(110px);
                 transform: scaleX(-1);
