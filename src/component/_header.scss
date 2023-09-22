@@ -147,6 +147,13 @@
                 &--items {
                     display: none;
                 }
+
+                &--logo {
+                    img {
+                        height: auto;
+                        width: 12rem;
+                    }
+                }
             }
 
             &__hero {
